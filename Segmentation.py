@@ -1,5 +1,3 @@
-##### Welcome Trust: Mosaic readership segmentation
-
 # Import packages
 
 import numpy as np
