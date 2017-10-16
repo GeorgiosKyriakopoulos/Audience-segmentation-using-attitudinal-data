@@ -72,8 +72,6 @@ df_fa = pd.DataFrame(fa.transform(df_scaled), columns=["FA1", "FA2", "FA3", "FA4
               "FA12", "FA13", "FA14"])
 df_fa.index = df_scaled.index
 del fa_scores, n_components, n_components_fa
-df_fa.to_csv("Z:/1.CLIENTS/Wellcome Trust/QUANT/260139752 Longform evaluation/9. Data Processing/3. SPSS/SPSS for segmentation/Segmentation workings_GK/Longform evaluation_FA_v1.csv")
-
 
 import matplotlib.pyplot as plt
 plt.imshow(df_fa.corr(), cmap=plt.cm.Blues, interpolation='nearest')
@@ -126,8 +124,6 @@ df_pca = pd.DataFrame(pca.transform(df_fa), columns=["PC1", "PC2", "PC3"])
 df_pca.index = df_fa.index
 
 vis = pd.concat([df_pca, cluster_labels_6], axis=1)
-vis.to_csv("Z:/1.CLIENTS/Wellcome Trust/QUANT/260139752 Longform evaluation/9. Data Processing/3. SPSS/SPSS for segmentation/Segmentation workings_GK/Longform evaluation_Clusters_v1.csv")
-
 
 colors = []
 for i in vis.Label_6:
